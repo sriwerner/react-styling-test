@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Button from './components/Button/Button';
-import Radium, {StyleRoot} from 'radium';
 import Person from './components/Person/Person';
 
 class App extends Component {
@@ -58,10 +57,6 @@ class App extends Component {
       padding: '8px',
       cursor: 'pointer',
       backgroundColor: 'green',
-      ':hover': {
-        backgroundColor: 'lightgreen',
-        color: 'black'
-      }
     }
 
     const btnClasses = [];
@@ -70,25 +65,19 @@ class App extends Component {
       text = "";
       btnClasses.push("orange2");
       style.backgroundColor = 'red';
-      style[':hover'] = {
-        backgroundColor: 'salmon',
-        color: 'black'
-      }
     } else {
       btnClasses.push("orange");
     }
 
     return (
-      <StyleRoot>
         <div className="App">
           <Button text='Dale masa' click={()=>this.onClickHandler()} style={btnClasses.map(it=>it)}/>
           <h1>{text}</h1>
           <div style={style}></div>
           {persons}
         </div>
-      </StyleRoot>
     );
   }
 }
 
-export default Radium(App);
+export default App;
