@@ -14,6 +14,7 @@ class App extends Component {
   render() {
 
     let text = "Hola :D";
+
     const btnClasses = [];
 
     if (!this.state.textVisible){
@@ -29,7 +30,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Button click={()=>this.onClickHandler()} style={btnClasses.map(it=>it)}/>
+        <Button text='Dale masa' click={()=>this.onClickHandler()} style={btnClasses.map(it=>it)}/>
         <h1>{text}</h1>
       </div>
     );
