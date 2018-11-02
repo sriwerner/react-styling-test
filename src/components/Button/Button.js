@@ -1,5 +1,6 @@
 import React from "react";
 import './button.css';
+import Radium from 'radium';
 
 const Button = (props) => {
     return(
@@ -7,4 +8,4 @@ const Button = (props) => {
     )
 }
 
-export default Button;
+export default Radium(Button);
