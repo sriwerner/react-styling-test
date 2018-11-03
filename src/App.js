@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import classes from './App.module.css';
 import Button from './components/Button/Button';
 import Person from './components/Person/Person';
 
@@ -47,33 +47,20 @@ class App extends Component {
     }
 
     let text = "Hola :D";
-    const style = {
-      background: 'green',
-      width: '100px',
-      height: '70px',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer',
-      backgroundColor: 'green',
+
+    const assignedClasses = [];
+
+    if (!this.state.persons.length <= 2){
+      assignedClasses.push(classes.red);
     }
-
-    const btnClasses = [];
-
-    if (!this.state.textVisible){
-      text = "";
-      btnClasses.push("orange2");
-      style.backgroundColor = 'red';
-    } else {
-      btnClasses.push("orange");
+    if (!this.state.persons.length <= 1){
+      assignedClasses.push(classes.bold);
     }
 
     return (
-        <div className="App">
-          <Button text='Dale masa' click={()=>this.onClickHandler()} style={btnClasses.map(it=>it)}/>
-          <h1>{text}</h1>
-          <div style={style}></div>
+        <div className={classes.App}>
+          <Button text='Dale click' click={()=>this.onClickHandler()} class={assignedClasses.join(' ')}/>
+          <h1 className={assignedClasses.join(' ')}>{text}</h1>
           {persons}
         </div>
     );

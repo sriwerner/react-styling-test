@@ -5,6 +5,7 @@
     font-size: 1.5em;
     border-radius: 4px;
     outline: none;
+    margin: 20px auto;
   }
 
   .btn:hover {

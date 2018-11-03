@@ -5,11 +5,5 @@
     box-shadow: 0 2px 3px #ccc;
     padding: 16px;
     text-align: center;
+    background-color: aquamarine;
 }
-
-/* @media (min-width: 500px){
-    .Person {
-        width: 50%;
-        background-color: burlywood;
-    }
-} */
