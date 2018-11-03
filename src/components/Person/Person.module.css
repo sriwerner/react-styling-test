@@ -7,3 +7,18 @@
     text-align: center;
     background-color: aquamarine;
 }
+
+.Person input {
+    width: 80%;
+}
+
+@media (min-width: 500px) {
+    .Person {
+        width: 450px;
+    }
+    
+    .Person input {
+        width: 150px;;
+    }
+
+}
